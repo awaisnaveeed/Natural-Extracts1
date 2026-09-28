@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-dark: #1A2217;
+  --color-brand-primary: #7f8D63;
+  --color-brand-light: #F3E4CD;
+  
+  --animate-marquee: marquee 45s linear infinite;
+  --animate-marquee-reverse: marquee-reverse 50s linear infinite;
+
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-50%); }
+  }
+  @keyframes marquee-reverse {
+    0% { transform: translateX(-50%); }
+    100% { transform: translateX(0%); }
+  }
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-light);
+    color: var(--color-brand-dark);
+    font-family: 'Inter', sans-serif;
+  }
+}
