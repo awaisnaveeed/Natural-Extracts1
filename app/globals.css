@@ -24,4 +24,8 @@
     color: var(--color-brand-dark);
     font-family: 'Inter', sans-serif;
   }
+  
+  a, button, [role="button"] {
+    cursor: pointer;
+  }
 }

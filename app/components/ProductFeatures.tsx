@@ -47,12 +47,18 @@ export default function ProductFeatures() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden md:block absolute md:left-[2%] lg:left-[-2%] xl:left-[2%] top-0 w-[220px] lg:w-[280px] xl:w-[320px] h-full z-30 pointer-events-none"
           >
-            <Image
-              src="/WhatsApp_Image_2026-09-26_at_6.56.02_PM-removebg-preview.png"
-              alt="Traditional Mustard Oil"
-              fill
-              className="object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)]"
-            />
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
+              className="w-full h-full relative"
+            >
+              <Image
+                src="/WhatsApp_Image_2026-09-26_at_6.56.02_PM-removebg-preview.png"
+                alt="Traditional Mustard Oil"
+                fill
+                className="object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)]"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Square Card */}
@@ -78,9 +84,22 @@ export default function ProductFeatures() {
             </div>
 
             {/* Bullets container */}
-            <div className="relative z-20 flex flex-col justify-center h-full w-full px-8 sm:px-12 md:px-0 md:w-[85%] lg:w-[80%] mx-auto md:ml-auto md:mr-10">
+            <motion.div 
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.5 } }
+              }}
+              className="relative z-20 flex flex-col justify-center h-full w-full px-8 sm:px-12 md:px-0 md:w-[85%] lg:w-[80%] mx-auto md:ml-auto md:mr-10"
+            >
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 border-b border-white/10 pb-5 mb-5 group cursor-pointer transition-colors hover:border-white/30"
               >
@@ -94,6 +113,10 @@ export default function ProductFeatures() {
               </motion.div>
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 border-b border-white/10 pb-5 mb-5 group cursor-pointer transition-colors hover:border-white/30"
               >
@@ -107,6 +130,10 @@ export default function ProductFeatures() {
               </motion.div>
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 border-b border-white/10 pb-5 mb-5 group cursor-pointer transition-colors hover:border-white/30"
               >
@@ -120,6 +147,10 @@ export default function ProductFeatures() {
               </motion.div>
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: 20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: 6 }}
                 className="flex items-center gap-4 group cursor-pointer transition-colors"
               >
@@ -132,7 +163,7 @@ export default function ProductFeatures() {
                 </div>
               </motion.div>
 
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>
@@ -177,12 +208,18 @@ export default function ProductFeatures() {
             transition={{ duration: 0.8, delay: 0.3 }}
             className="hidden md:block absolute md:right-[2%] lg:right-[-2%] xl:right-[2%] top-0 w-[220px] lg:w-[280px] xl:w-[320px] h-full z-30 pointer-events-none"
           >
-            <Image
-              src="/2-removebg-preview.png"
-              alt="Premium Canola Oil"
-              fill
-              className="object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)]"
-            />
+            <motion.div
+              animate={{ y: [0, -15, 0] }}
+              transition={{ duration: 6, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+              className="w-full h-full relative"
+            >
+              <Image
+                src="/2-removebg-preview.png"
+                alt="Premium Canola Oil"
+                fill
+                className="object-contain drop-shadow-[0_20px_35px_rgba(0,0,0,0.4)]"
+              />
+            </motion.div>
           </motion.div>
 
           {/* Square Card */}
@@ -208,9 +245,22 @@ export default function ProductFeatures() {
             </div>
 
             {/* Bullets container */}
-            <div className="relative z-20 flex flex-col justify-center h-full w-full px-8 sm:px-12 md:px-0 md:w-[85%] lg:w-[80%] mx-auto md:mr-auto md:ml-10">
+            <motion.div 
+              initial="hidden"
+              whileInView="show"
+              viewport={{ once: true }}
+              variants={{
+                hidden: { opacity: 0 },
+                show: { opacity: 1, transition: { staggerChildren: 0.15, delayChildren: 0.5 } }
+              }}
+              className="relative z-20 flex flex-col justify-center h-full w-full px-8 sm:px-12 md:px-0 md:w-[85%] lg:w-[80%] mx-auto md:mr-auto md:ml-10"
+            >
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: -6 }}
                 className="flex items-center gap-4 border-b border-white/10 pb-5 mb-5 group cursor-pointer transition-colors hover:border-white/30"
               >
@@ -224,6 +274,10 @@ export default function ProductFeatures() {
               </motion.div>
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: -6 }}
                 className="flex items-center gap-4 border-b border-white/10 pb-5 mb-5 group cursor-pointer transition-colors hover:border-white/30"
               >
@@ -237,6 +291,10 @@ export default function ProductFeatures() {
               </motion.div>
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: -6 }}
                 className="flex items-center gap-4 border-b border-white/10 pb-5 mb-5 group cursor-pointer transition-colors hover:border-white/30"
               >
@@ -250,6 +308,10 @@ export default function ProductFeatures() {
               </motion.div>
               
               <motion.div 
+                variants={{
+                  hidden: { opacity: 0, x: -20 },
+                  show: { opacity: 1, x: 0, transition: { duration: 0.5, ease: "easeOut" } }
+                }}
                 whileHover={{ x: -6 }}
                 className="flex items-center gap-4 group cursor-pointer transition-colors"
               >
@@ -262,7 +324,7 @@ export default function ProductFeatures() {
                 </div>
               </motion.div>
 
-            </div>
+            </motion.div>
           </motion.div>
         </div>
       </section>

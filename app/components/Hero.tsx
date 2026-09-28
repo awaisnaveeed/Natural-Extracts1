@@ -155,13 +155,19 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
               className="relative w-[320px] h-[440px] md:w-[400px] md:h-[540px]"
             >
-              <Image
-                src="/12.png"
-                alt="Cold Pressed Canola and Mustard Oils"
-                fill
-                className="object-contain drop-shadow-2xl"
-                priority
-              />
+              <motion.div
+                animate={{ y: [0, -20, 0] }}
+                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+                className="w-full h-full relative"
+              >
+                <Image
+                  src="/12.png"
+                  alt="Cold Pressed Canola and Mustard Oils"
+                  fill
+                  className="object-contain drop-shadow-2xl"
+                  priority
+                />
+              </motion.div>
             </motion.div>
           </div>
         </div>
