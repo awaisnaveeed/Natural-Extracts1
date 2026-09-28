@@ -1,6 +1,6 @@
 'use client';
 import Link from 'next/link';
-import { Instagram, Facebook, Twitter, Youtube, Leaf, ShieldCheck, Droplet } from 'lucide-react';
+import { Instagram, Facebook, Leaf, ShieldCheck, Droplet } from 'lucide-react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 
@@ -66,9 +66,9 @@ export default function Footer() {
             <div>
               <h4 className="font-bold text-xl mb-6 uppercase tracking-tight text-brand-dark">legal</h4>
               <ul className="space-y-4 text-[15px] text-brand-dark/70 font-medium lowercase">
-                <li><Link href="#" className="hover:text-brand-primary transition-colors">terms of use</Link></li>
-                <li><Link href="#" className="hover:text-brand-primary transition-colors">privacy policy</Link></li>
-                <li><Link href="#" className="hover:text-brand-primary transition-colors">accessibility</Link></li>
+                <li><Link href="/terms-of-use" className="hover:text-brand-primary transition-colors">terms of use</Link></li>
+                <li><Link href="/privacy-policy" className="hover:text-brand-primary transition-colors">privacy policy</Link></li>
+                <li><Link href="/accessibility" className="hover:text-brand-primary transition-colors">accessibility</Link></li>
               </ul>
             </div>
           </div>
@@ -80,17 +80,22 @@ export default function Footer() {
         
         {/* Social Icons */}
         <div className="flex gap-2.5 w-full md:w-auto justify-center md:justify-start">
-          <Link href="#" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
+          <Link href="https://www.instagram.com/naturallextracts/" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
             <Instagram className="w-5 h-5 md:w-6 md:h-6" />
           </Link>
-          <Link href="#" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
+          <Link href="https://www.facebook.com/naturallextracts" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
             <Facebook className="w-5 h-5 md:w-6 md:h-6" />
           </Link>
-          <Link href="#" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
-            <Youtube className="w-5 h-5 md:w-6 md:h-6" />
+          <Link href="https://wa.me/923362127999" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 md:w-6 md:h-6">
+              <path d="M3 21l1.65-3.8a9 9 0 1 1 3.4 2.9L3 21" />
+              <path d="M9 10a.5.5 0 0 0 1 0V9a.5.5 0 0 0-1 0v1a5 5 0 0 0 5 5h1a.5.5 0 0 0 0-1h-1a.5.5 0 0 0 0 1" />
+            </svg>
           </Link>
-          <Link href="#" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
-            <Twitter className="w-5 h-5 md:w-6 md:h-6" />
+          <Link href="https://www.tiktok.com/@naturalextracts.pk" target="_blank" rel="noopener noreferrer" className="w-12 h-12 md:w-14 md:h-14 flex items-center justify-center bg-[#F3E4CD] text-[#3A4726] rounded-full hover:bg-brand-light transition-colors shadow-md">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5 md:w-6 md:h-6">
+              <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+            </svg>
           </Link>
         </div>
 
