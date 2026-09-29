@@ -95,57 +95,67 @@ export default function Hero() {
 
           {/* Crisp, Simple Floating Elements (Noka Style) */}
           <motion.div 
-            animate={{ y: [0, -15, 0], rotate: [0, 10, 0] }} 
-            transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[10%] left-[10%] text-[#EFEADF] opacity-50 z-0 pointer-events-none"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.5 }}
+            transition={{ duration: 1, delay: 0.5 }}
+            className="absolute top-[10%] left-[10%] text-[#EFEADF] z-0 pointer-events-none"
           >
-            <Leaf className="w-10 h-10 drop-shadow-md" />
-          </motion.div>
-
-          <motion.div 
-            animate={{ y: [0, 20, 0], rotate: [0, -15, 0] }} 
-            transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
-            className="absolute bottom-[15%] right-[10%] text-brand-primary opacity-60 z-0 pointer-events-none"
-          >
-            <Leaf className="w-12 h-12 drop-shadow-md" />
-          </motion.div>
-
-          <motion.div 
-            animate={{ y: [0, -10, 0] }} 
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            className="absolute top-[20%] right-[15%] z-0 pointer-events-none"
-          >
-            <div className="w-8 h-8 bg-yellow-400 rounded-full opacity-90 flex items-center justify-center shadow-md">
-              <Droplet className="w-4 h-4 text-[#1a2217] fill-current" />
+            <div className="animate-float-1">
+              <Leaf className="w-10 h-10 drop-shadow-md" />
             </div>
           </motion.div>
 
           <motion.div 
-            animate={{ y: [0, 15, 0] }} 
-            transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 2 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            transition={{ duration: 1, delay: 0.7 }}
+            className="absolute bottom-[15%] right-[10%] text-brand-primary z-0 pointer-events-none"
+          >
+            <div className="animate-float-2">
+              <Leaf className="w-12 h-12 drop-shadow-md" />
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 0.9 }}
+            className="absolute top-[20%] right-[15%] z-0 pointer-events-none"
+          >
+            <div className="animate-float-3 flex items-center justify-center">
+              <div className="w-8 h-8 bg-yellow-400 rounded-full opacity-90 flex items-center justify-center shadow-md">
+                <Droplet className="w-4 h-4 text-[#1a2217] fill-current" />
+              </div>
+            </div>
+          </motion.div>
+
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1, delay: 1.1 }}
             className="absolute bottom-[25%] left-[5%] z-0 pointer-events-none"
           >
-            <div className="w-10 h-10 bg-yellow-400 rounded-full opacity-90 flex items-center justify-center shadow-md">
-              <Droplet className="w-5 h-5 text-[#1a2217] fill-current" />
+            <div className="animate-float-1 flex items-center justify-center">
+              <div className="w-10 h-10 bg-yellow-400 rounded-full opacity-90 flex items-center justify-center shadow-md">
+                <Droplet className="w-5 h-5 text-[#1a2217] fill-current" />
+              </div>
             </div>
           </motion.div>
 
           {/* Small Sparkles */}
-          <motion.div 
-            animate={{ opacity: [0.4, 1, 0.4] }} 
-            transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="absolute top-[40%] right-[5%] text-[#f3e4cd] opacity-70 z-0 pointer-events-none"
-          >
-            <Sparkles className="w-6 h-6" />
-          </motion.div>
+          <div className="absolute top-[40%] right-[5%] text-[#f3e4cd] z-0 pointer-events-none">
+            <div className="animate-pulse-glow">
+              <Sparkles className="w-6 h-6" />
+            </div>
+          </div>
 
-          <motion.div 
-            animate={{ opacity: [0.4, 1, 0.4] }} 
-            transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1.5 }}
-            className="absolute top-[30%] left-[25%] text-yellow-400 opacity-70 z-0 pointer-events-none"
+          <div className="absolute top-[30%] left-[25%] text-yellow-400 z-0 pointer-events-none"
+            style={{ animationDelay: '1s' }}
           >
-            <Sparkles className="w-5 h-5" />
-          </motion.div>
+            <div className="animate-pulse-glow">
+              <Sparkles className="w-5 h-5" />
+            </div>
+          </div>
 
           {/* Main Hero Image */}
           <div className="relative w-full h-full flex items-center justify-center z-10">
@@ -155,11 +165,7 @@ export default function Hero() {
               transition={{ duration: 1, delay: 0.3, ease: "easeOut" }}
               className="relative w-[320px] h-[440px] md:w-[400px] md:h-[540px]"
             >
-              <motion.div
-                animate={{ y: [0, -20, 0] }}
-                transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
-                className="w-full h-full relative"
-              >
+              <div className="w-full h-full relative animate-float-3">
                 <Image
                   src="/12.png"
                   alt="Cold Pressed Canola and Mustard Oils"
@@ -167,7 +173,7 @@ export default function Hero() {
                   className="object-contain drop-shadow-2xl"
                   priority
                 />
-              </motion.div>
+              </div>
             </motion.div>
           </div>
         </div>
